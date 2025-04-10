@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "cx": "https://w3id.org/catenax/policy/",
+    "odrl:eq": { "@id": "http://www.w3.org/ns/odrl/2/eq", "@type": "@id" }
+  },
+  "@type": "Policy",
+  "odrl:permission": [
+    {
+      "odrl:action": "USE",
+      "odrl:constraint": {
+        "@type": "LogicalConstraint",
+        "odrl:and": [
+          {
+            "@type": "odrl:Constraint",
+            "odrl:leftOperand": "cx:Membership",
+            "odrl:operator": "odrl:eq",
+            "odrl:rightOperand": "active"
+          },
+          {
+            "@type": "odrl:Constraint",
+            "odrl:leftOperand": "cx:FrameworkAgreement",
+            "odrl:operator": "odrl:eq",
+            "odrl:rightOperand": "cx:DD:01"
+          }
+        ]
+      }
+    }
+  ]
+}

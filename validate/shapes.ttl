@@ -1,0 +1,36 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <https://example/policy/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Shape for constraints using ex:PartnerStatus
+ex:PartnerStatusShape a sh:NodeShape ;
+                      sh:targetObjectsOf odrl:constraint ;
+                      sh:property [
+                            sh:path odrl:leftOperand ;
+                            sh:hasValue ex:PartnerStatus ;
+                        ] ;
+                      sh:property [
+                            sh:path odrl:operator ;
+                            sh:hasValue odrl:eq ;
+                        ] ;
+                      sh:property [
+                            sh:path odrl:rightOperand ;
+                            sh:hasValue "active"^^xsd:string ;
+                        ] .
+
+# Shape for constraints using ex:Region
+ex:RegionShape a sh:NodeShape ;
+               sh:targetObjectsOf odrl:constraint ;
+               sh:property [
+                     sh:path odrl:leftOperand ;
+                     sh:hasValue ex:Region ;
+                 ] ;
+               sh:property [
+                     sh:path odrl:operator ;
+                     sh:hasValue odrl:eq ;
+                 ] ;
+               sh:property [
+                     sh:path odrl:rightOperand ;
+                     sh:hasValue "EU"^^xsd:string ;
+                 ] .

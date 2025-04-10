@@ -1,0 +1,68 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cx:     <https://w3id.org/catenax/policy/> .
+@prefix : <http://example.org/shapes#> .
+
+:PolicyShape
+    a sh:NodeShape ;
+    sh:targetClass odrl:Policy ;
+    sh:property [
+          sh:path odrl:permission ;
+          sh:node :PermissionShape ;
+      ] .
+
+:PermissionShape
+    a sh:NodeShape ;
+    sh:property [
+          sh:path odrl:constraint ;
+          sh:node :LogicalConstraintShape ;
+      ] .
+
+:LogicalConstraintShape
+    a sh:NodeShape ;
+    sh:property [
+          sh:path odrl:and ;
+          sh:nodeKind sh:BlankNodeOrIRI ;
+          sh:node :ConstraintShape ;
+          sh:minCount 1 ;
+      ] .
+
+:ConstraintShape
+    a sh:NodeShape ;
+    sh:targetClass odrl:Constraint ;
+    sh:or (
+          :MembershipConstraintShape
+          :SustainabilityConstraintShape
+      ) .
+
+:MembershipConstraintShape
+    a sh:NodeShape ;
+    sh:property [
+          sh:path odrl:leftOperand ;
+          sh:hasValue "cx:Membership" ;
+      ] ;
+    sh:property [
+          sh:path odrl:rightOperand ;
+          sh:hasValue "active" ;
+      ] ;
+    sh:property [
+          sh:path odrl:operator ;
+          sh:hasValue "odrl:eq" ;
+      ] .
+
+:SustainabilityConstraintShape
+    a sh:NodeShape ;
+#    sh:targetClass odrl:Constraint ;
+    sh:property [
+          sh:path odrl:leftOperand ;
+          sh:hasValue "cx:FrameworkAgreement" ;
+      ] ;
+    sh:property [
+          sh:path odrl:rightOperand ;
+          sh:hasValue "cx:DD:01" ;
+      ] ;
+    sh:property [
+          sh:path odrl:operator ;
+          sh:hasValue "odrl:eq" ;
+      ] .
