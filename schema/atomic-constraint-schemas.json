@@ -7,7 +7,7 @@
       "$ref": "#/definitions/AtomicCatenaXConstraint"
     }
   ],
-  "$id": "https://w3id.org/catenax/2025/9/policy/schema/atomic-constraint-schemas.json",
+  "$id": "./schema/constraint/schema/atomic-constraint-schemas.json",
   "definitions": {
     "AtomicCatenaXConstraint": {
       "anyOf": [
@@ -42,98 +42,98 @@
     "AtomicAccessPermissionConstraint": {
       "anyOf": [
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/framework-agreement-constraint-schema.json"
+          "$ref": "./schema/constraint/framework-agreement-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/membership-constraint-schema.json"
+          "$ref": "./schema/constraint/membership-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/business-partner-number-constraint-schema.json"
+          "$ref": "./schema/constraint/business-partner-number-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/business-partner-group-constraint-schema.json"
+          "$ref": "./schema/constraint/business-partner-group-constraint-schema.transformed.json"
         }
       ]
     },
     "AtomicUsagePermissionConstraint": {
       "anyOf": [
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/framework-agreement-constraint-schema.json"
+          "$ref": "./schema/constraint/framework-agreement-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/membership-constraint-schema.json"
+          "$ref": "./schema/constraint/membership-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/usage-purpose-constraint-schema.json"
+          "$ref": "./schema/constraint/usage-purpose-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/contract-reference-constraint-schema.json"
+          "$ref": "./schema/constraint/contract-reference-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/affiliates-region-constraint-schema.json"
+          "$ref": "./schema/constraint/affiliates-region-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/affiliates-bpnl-constraint-schema.json"
+          "$ref": "./schema/constraint/affiliates-bpnl-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/managed-legal-entity-region-constraint-schema.json"
+          "$ref": "./schema/constraint/managed-legal-entity-region-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/managed-legal-entity-bpnl-constraint-schema.json"
+          "$ref": "./schema/constraint/managed-legal-entity-bpnl-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/data-frequency-constraint-schema.json"
+          "$ref": "./schema/constraint/data-frequency-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/version-changes-constraint-schema.json"
+          "$ref": "./schema/constraint/version-changes-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/contract-termination-constraint-schema.json"
+          "$ref": "./schema/constraint/contract-termination-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/confidential-information-measures-constraint-schema.json"
+          "$ref": "./schema/constraint/confidential-information-measures-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/confidential-information-sharing-constraint-schema.json"
+          "$ref": "./schema/constraint/confidential-information-sharing-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/exclusive-usage-constraint-schema.json"
+          "$ref": "./schema/constraint/exclusive-usage-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/warranty-constraint-schema.json"
+          "$ref": "./schema/constraint/warranty-constraint-schema.transformed.json"
         },
         {
           "oneOf": [
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/warranty-duration-constraint-schema.json"
+              "$ref": "./schema/constraint/warranty-duration-constraint-schema.transformed.json"
             },
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/warranty-definition-constraint-schema.json"
+              "$ref": "./schema/constraint/warranty-definition-constraint-schema.transformed.json"
             }
           ]
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/liability-constraint-schema.json"
+          "$ref": "./schema/constraint/liability-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/jurisdiction-location-constraint-schema.json"
+          "$ref": "./schema/constraint/jurisdiction-location-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/jurisdiction-location-reference-constraint-schema.json"
+          "$ref": "./schema/constraint/jurisdiction-location-reference-constraint-schema.transformed.json"
         },
         {
-          "$ref": "https://w3id.org/catenax/2025/9/policy/precedence-constraint-schema.json"
+          "$ref": "./schema/constraint/precedence-constraint-schema.transformed.json"
         },
         {
           "oneOf": [
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/data-usage-end-duration-days-constraint-schema.json"
+              "$ref": "./schema/constraint/data-usage-end-duration-days-constraint-schema.transformed.json"
             },
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/data-usage-end-date-constraint-schema.json"
+              "$ref": "./schema/constraint/data-usage-end-date-constraint-schema.transformed.json"
             },
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/data-usage-end-definition-constraint-schema.json"
+              "$ref": "./schema/constraint/data-usage-end-definition-constraint-schema.transformed.json"
             }
           ]
         }
@@ -147,10 +147,10 @@
         {
           "oneOf": [
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/data-provisioning-end-duration-days-constraint-schema.json"
+              "$ref": "./schema/constraint/data-provisioning-end-duration-days-constraint-schema.transformed.json"
             },
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/data-provisioning-end-date-constraint-schema.json"
+              "$ref": "./schema/constraint/data-provisioning-end-date-constraint-schema.transformed.json"
             }
           ]
         }
@@ -164,13 +164,13 @@
         {
           "anyOf": [
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/affiliates-region-constraint-schema.json"
+              "$ref": "./schema/constraint/affiliates-region-constraint-schema.transformed.json"
             },
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/affiliates-bpnl-constraint-schema.json"
+              "$ref": "./schema/constraint/affiliates-bpnl-constraint-schema.transformed.json"
             },
             {
-              "$ref": "https://w3id.org/catenax/2025/9/policy/usage-restriction-constraint-schema.json"
+              "$ref": "./schema/constraint/usage-restriction-constraint-schema.transformed.json"
             }
           ]
         }
